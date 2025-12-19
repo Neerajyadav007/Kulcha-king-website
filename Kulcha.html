@@ -1,0 +1,3033 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kulcha King & Parantha Singh | Authentic Punjabi Cuisine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --saffron: #F97316;
+            --golden: #FACC15;
+            --deep-red: #DC2626;
+            --cream: #FFFBEB;
+            --brown: #451A03;
+            --light-beige: #FEF3C7;
+            --shadow: rgba(105, 65, 0, 0.15);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--brown);
+            background-color: var(--cream);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--brown);
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            width: 60%;
+            height: 4px;
+            background: linear-gradient(to right, var(--saffron), var(--golden));
+            bottom: -10px;
+            left: 0;
+            border-radius: 2px;
+        }
+        
+        h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .btn-primary {
+            background-color: var(--deep-red);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: #b91c1c;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px var(--shadow);
+        }
+        
+        .btn-secondary {
+            background-color: var(--golden);
+            color: var(--brown);
+        }
+        
+        .btn-secondary:hover {
+            background-color: #eab308;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px var(--shadow);
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            border-radius: 50%;
+            overflow: hidden;
+            background-color: var(--saffron);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--brown);
+        }
+        
+        .logo-text span {
+            color: var(--deep-red);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--brown);
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: var(--saffron);
+        }
+        
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: var(--saffron);
+            left: 0;
+            bottom: -5px;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+        
+        .header-buttons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--brown);
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1681&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 180px 0 100px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            color: white;
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        /* Featured Dishes */
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2:after {
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+        }
+        
+        .dish-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .dish-card {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px var(--shadow);
+            transition: transform 0.3s ease;
+        }
+        
+        .dish-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .dish-img {
+            height: 220px;
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        .dish-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .dish-card:hover .dish-img img {
+            transform: scale(1.05);
+        }
+        
+        .dish-info {
+            padding: 25px;
+        }
+        
+        .dish-info h3 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .price {
+            color: var(--deep-red);
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        
+        /* Menu Section */
+        .menu-section {
+            background-color: var(--light-beige);
+        }
+        
+        .menu-category {
+            margin-bottom: 60px;
+        }
+        
+        .menu-category h3 {
+            color: var(--deep-red);
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 2px dashed var(--saffron);
+        }
+        
+        .menu-category-desc {
+            color: var(--saffron);
+            font-weight: 500;
+            margin-bottom: 20px;
+            font-style: italic;
+            background-color: var(--cream);
+            padding: 10px 15px;
+            border-radius: 8px;
+            border-left: 4px solid var(--deep-red);
+        }
+        
+        .menu-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 30px;
+        }
+        
+        @media (max-width: 600px) {
+            .menu-items {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .menu-item {
+            background-color: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 20px var(--shadow);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .menu-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .item-info {
+            flex: 1;
+        }
+        
+        .item-name-price {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .item-name {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--brown);
+        }
+        
+        .item-price {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--deep-red);
+        }
+        
+        .item-desc {
+            color: #666;
+            font-size: 1rem;
+        }
+        
+        .item-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 10px;
+            margin-left: 20px;
+            overflow: hidden;
+            flex-shrink: 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .item-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* About Section */
+        .about-section {
+            padding: 80px 20px;
+            background-color: #fff8e1;
+        }
+        
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .about-tagline {
+            font-size: 2.5rem;
+            color: #d35400;
+            font-weight: 900;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+        
+        .about-text {
+            padding-right: 20px;
+        }
+        
+        .about-heading {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 25px;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+        
+        .about-description {
+            font-size: 1.1rem;
+            color: #444;
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+        
+        .about-description strong {
+            color: #d35400;
+            font-weight: 700;
+        }
+        
+        .divider {
+            height: 4px;
+            background: linear-gradient(to right, transparent, #e67e22, transparent);
+            width: 200px;
+            margin: 25px auto 40px;
+            border-radius: 2px;
+        }
+        
+        .divider-small {
+            height: 2px;
+            background-color: #e67e22;
+            width: 80px;
+            margin: 30px 0;
+        }
+        
+        .about-images {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        
+        .main-image {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        
+        .main-image:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+        }
+        
+        .main-img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            display: block;
+        }
+        
+        .menu-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #e67e22, #d35400);
+            color: white;
+            padding: 16px 45px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            box-shadow: 0 5px 20px rgba(230, 126, 34, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+        
+        .menu-button:hover {
+            background: linear-gradient(135deg, #d35400, #c0392b);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(230, 126, 34, 0.4);
+        }
+        
+        /* Order Section */
+        .order-section {
+            background-color: var(--light-beige);
+            padding: 80px 0;
+        }
+        
+        .order-container {
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px var(--shadow);
+            padding: 40px;
+            margin-top: 40px;
+        }
+        
+        .order-steps {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .order-steps:before {
+            content: '';
+            position: absolute;
+            top: 25px;
+            left: 10%;
+            right: 10%;
+            height: 3px;
+            background-color: #e5e5e5;
+            z-index: 1;
+        }
+        
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+            flex: 1;
+        }
+        
+        .step-number {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #e5e5e5;
+            color: #666;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .step.active .step-number {
+            background-color: var(--saffron);
+            color: white;
+            transform: scale(1.1);
+        }
+        
+        .step-text {
+            font-weight: 600;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .step.active .step-text {
+            color: var(--brown);
+        }
+        
+        .order-step {
+            display: none;
+        }
+        
+        .order-step.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .step-header {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .step-header h3 {
+            color: var(--brown);
+            margin-bottom: 10px;
+        }
+        
+        .order-categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+            justify-content: center;
+        }
+        
+        .category-btn {
+            padding: 12px 24px;
+            background-color: #f5f5f5;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            color: #666;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .category-btn:hover {
+            background-color: #e0e0e0;
+        }
+        
+        .category-btn.active {
+            background-color: var(--saffron);
+            color: white;
+        }
+        
+        .order-menu-items {
+            max-height: 500px;
+            overflow-y: auto;
+            padding-right: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .menu-category-items {
+            display: none;
+        }
+        
+        .menu-category-items.active {
+            display: block;
+        }
+        
+        .order-item {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+            transition: background-color 0.3s ease;
+        }
+        
+        .order-item:hover {
+            background-color: #f9f9f9;
+        }
+        
+        .item-select {
+            margin-right: 20px;
+        }
+        
+        .item-select input[type="checkbox"] {
+            display: none;
+        }
+        
+        .item-select label {
+            width: 24px;
+            height: 24px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            display: block;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .item-select input[type="checkbox"]:checked + label {
+            background-color: var(--saffron);
+            border-color: var(--saffron);
+        }
+        
+        .item-select input[type="checkbox"]:checked + label:after {
+            content: '✓';
+            position: absolute;
+            color: white;
+            font-size: 14px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .item-details {
+            flex: 1;
+        }
+        
+        .item-details h4 {
+            margin-bottom: 5px;
+            color: var(--brown);
+        }
+        
+        .item-details p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        
+        .item-price {
+            font-weight: 700;
+            color: var(--deep-red);
+            font-size: 1.1rem;
+        }
+        
+        .item-quantity {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+        }
+        
+        .qty-btn {
+            width: 30px;
+            height: 30px;
+            border: 1px solid #ddd;
+            background-color: white;
+            border-radius: 4px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .qty-btn:hover {
+            background-color: #f5f5f5;
+        }
+        
+        .qty-input {
+            width: 50px;
+            height: 30px;
+            text-align: center;
+            border: 1px solid #ddd;
+            margin: 0 5px;
+            border-radius: 4px;
+        }
+        
+        .order-summary {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .order-summary h4 {
+            margin-bottom: 20px;
+            color: var(--brown);
+        }
+        
+        .summary-items {
+            margin-bottom: 20px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px dashed #ddd;
+        }
+        
+        .summary-item:last-child {
+            border-bottom: none;
+        }
+        
+        .summary-item-name {
+            display: flex;
+            align-items: center;
+        }
+        
+        .summary-item-qty {
+            background-color: var(--saffron);
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            margin-right: 10px;
+        }
+        
+        .empty-cart {
+            text-align: center;
+            color: #999;
+            font-style: italic;
+            padding: 20px;
+        }
+        
+        .summary-total {
+            border-top: 2px solid #ddd;
+            padding-top: 20px;
+        }
+        
+        .total-line {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        
+        .grand-total {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--brown);
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 2px solid var(--saffron);
+        }
+        
+        .step-actions {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .delivery-options {
+            margin-bottom: 30px;
+        }
+        
+        .delivery-type {
+            margin-bottom: 30px;
+        }
+        
+        .delivery-type h4 {
+            margin-bottom: 15px;
+            color: var(--brown);
+        }
+        
+        .type-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .type-option {
+            border: 2px solid #eee;
+            border-radius: 10px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .type-option:hover {
+            border-color: var(--saffron);
+        }
+        
+        .type-option input[type="radio"] {
+            display: none;
+        }
+        
+        .option-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .option-content i {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: var(--saffron);
+        }
+        
+        .option-content span {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .option-content small {
+            color: #666;
+            font-size: 0.85rem;
+        }
+        
+        .delivery-form {
+            background-color: #f9f9f9;
+            padding: 25px;
+            border-radius: 10px;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--brown);
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--saffron);
+        }
+        
+        .payment-options {
+            margin-bottom: 30px;
+        }
+        
+        .payment-method {
+            margin-bottom: 30px;
+        }
+        
+        .payment-option {
+            border: 2px solid #eee;
+            border-radius: 10px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+            margin-bottom: 15px;
+        }
+        
+        .payment-option:hover {
+            border-color: var(--saffron);
+        }
+        
+        .order-review {
+            background-color: #f9f9f9;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .review-items {
+            margin-bottom: 20px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        
+        .review-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px dashed #ddd;
+        }
+        
+        .terms-agreement {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        
+        .terms-agreement label {
+            display: flex;
+            align-items: flex-start;
+            cursor: pointer;
+        }
+        
+        .terms-agreement input[type="checkbox"] {
+            margin-right: 10px;
+            margin-top: 3px;
+        }
+        
+        .terms-agreement a {
+            color: var(--deep-red);
+            text-decoration: none;
+        }
+        
+        .terms-agreement a:hover {
+            text-decoration: underline;
+        }
+        
+        .confirmation-content {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .confirmation-icon {
+            font-size: 5rem;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+        
+        .order-number {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--brown);
+            margin-bottom: 20px;
+        }
+        
+        .order-details-confirm {
+            background-color: #f9f9f9;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+            text-align: left;
+        }
+        
+        .order-details-confirm h4 {
+            margin-bottom: 15px;
+            color: var(--brown);
+        }
+        
+        .confirmation-actions {
+            margin-top: 30px;
+        }
+        
+        .confirmation-actions p {
+            margin-bottom: 20px;
+            color: #666;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background-color: white;
+        }
+        
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .testimonial-container {
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            background-color: var(--cream);
+        }
+        
+        .testimonial-slide {
+            padding: 40px;
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .testimonial-slide.active {
+            display: block;
+        }
+        
+        .testimonial-text {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-bottom: 25px;
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .testimonial-text:before {
+            content: '"';
+            font-size: 4rem;
+            color: var(--saffron);
+            position: absolute;
+            left: 0;
+            top: -20px;
+            opacity: 0.5;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: var(--golden);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--brown);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-right: 15px;
+        }
+        
+        .author-info h4 {
+            margin-bottom: 5px;
+        }
+        
+        .stars {
+            color: var(--golden);
+            margin-bottom: 5px;
+        }
+        
+        .slider-controls {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            gap: 15px;
+        }
+        
+        .slider-btn {
+            background-color: var(--saffron);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            font-size: 1.2rem;
+        }
+        
+        .slider-btn:hover {
+            background-color: var(--deep-red);
+            transform: scale(1.1);
+        }
+        
+        /* Contact Section */
+        .contact {
+            background-color: var(--light-beige);
+        }
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .contact-card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 25px var(--shadow);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .contact-icon {
+            font-size: 2.5rem;
+            color: var(--saffron);
+            margin-bottom: 20px;
+        }
+        
+        .contact-card h3 {
+            margin-bottom: 15px;
+        }
+        
+        .contact-details p {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .hours-list {
+            list-style: none;
+        }
+        
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px dashed #ddd;
+        }
+        
+        .contact-link {
+            color: var(--deep-red);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-link:hover {
+            color: var(--saffron);
+            text-decoration: underline;
+        }
+        
+        .note {
+            font-size: 0.85rem;
+            color: #666;
+            font-style: italic;
+            margin-top: 10px;
+            padding: 8px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            border-left: 3px solid var(--golden);
+        }
+        
+        .social-section h4 {
+            margin-bottom: 15px;
+            color: var(--brown);
+        }
+        
+        .contact-social {
+            justify-content: center;
+            margin-top: 10px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--brown);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            color: white;
+            margin-bottom: 25px;
+            font-size: 1.5rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--golden);
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background-color: var(--saffron);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 3rem;
+            }
+            
+            h2 {
+                font-size: 2.2rem;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .about-image {
+                width: 100%;
+            }
+            
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+            
+            .about-text {
+                padding-right: 0;
+                text-align: center;
+            }
+            
+            .about-images {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                padding: 20px 0;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                margin: 10px 0;
+                text-align: center;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .header-buttons {
+                display: none;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .menu-items {
+                grid-template-columns: 1fr;
+            }
+            
+            .order-container {
+                padding: 20px;
+            }
+            
+            .step-text {
+                font-size: 0.8rem;
+            }
+            
+            .order-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .item-select {
+                margin-bottom: 15px;
+            }
+            
+            .item-quantity {
+                margin-left: 0;
+                margin-top: 15px;
+            }
+            
+            .step-actions {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .step-actions button {
+                width: 100%;
+            }
+            
+            .about-tagline {
+                font-size: 2rem;
+            }
+            
+            .about-heading {
+                font-size: 1.7rem;
+            }
+            
+            .about-description {
+                font-size: 1rem;
+            }
+            
+            .menu-button {
+                padding: 14px 35px;
+                font-size: 1.1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .about-tagline {
+                font-size: 1.7rem;
+                letter-spacing: 1px;
+            }
+            
+            .about-heading {
+                font-size: 1.5rem;
+            }
+            
+            .menu-button {
+                padding: 12px 30px;
+                font-size: 1rem;
+            }
+            
+            .about-images {
+                gap: 20px;
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <div class="logo-img">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <div class="logo-text">
+                    <div>Kulcha <span>King</span></div>
+                    <div style="font-size: 1.4rem; margin-top: -5px;">Parantha <span>Singh</span></div>
+                </div>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#order">Order</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+            <div class="header-buttons">
+                <a href="#order" class="btn btn-primary">Order Online</a>
+                <a href="tel:+918949019457" class="btn btn-secondary">Call Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1 class="fade-in">Authentic Punjabi Flavors in Every<br><span style="color: var(--golden);">Bite!</span></h1>
+            <p class="fade-in">Experience the crispy, buttery perfection of Amritsari Kulchas and hearty paranthas made with traditional recipes and love.</p>
+            <div class="hero-buttons fade-in">
+                <a href="#menu" class="btn btn-primary">View Our Menu</a>
+                <a href="#order" class="btn btn-secondary">Order Online</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Dishes Section -->
+    <section class="featured-dishes">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Signature Dishes</h2>
+                <p>Experience the taste of Punjab with our most beloved creations</p>
+            </div>
+            
+            <div class="dish-grid">
+                <div class="dish-card fade-in">
+                    <div class="dish-img">
+                        <img src="data:image/jpeg;base64,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" alt="Amritsari Kulcha">
+                    </div>
+                    <div class="dish-info">
+                        <h3>Amritsari Kulcha <span class="price">₹179/-</span></h3>
+                        <p>Crispy, buttery kulcha stuffed with spiced potatoes, served with chole and tangy chutneys</p>
+                    </div>
+                </div>
+                
+                <div class="dish-card fade-in">
+                    <div class="dish-img">
+                        <img src="data:image/jpeg;base64,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" alt="Chur Chur Naan">
+                    </div>
+                    <div class="dish-info">
+                        <h3>Chur Chur Naan <span class="price">₹199/-</span></h3>
+                        <p>Flaky, layered naan brushed with butter, perfect with creamy dal makhni</p>
+                    </div>
+                </div>
+                
+                <div class="dish-card fade-in">
+                    <div class="dish-img">
+                        <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Paneer Parantha">
+                    </div>
+                    <div class="dish-info">
+                        <h3>Paneer Parantha <span class="price">₹199/-</span></h3>
+                        <p>Golden-brown parantha stuffed with spicy cottage cheese masala</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <h1 class="about-tagline">A TRUE TASTE OF PUNJAB</h1>
+            
+            <div class="divider"></div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="about-heading">Authentic Punjabi Flavors In Every Bite!</h2>
+                    
+                    <p class="about-description">
+                        <strong>Kulcha King & Parantha Singh</strong> brings you a mouthwatering selection of crispy, buttery kulchas and flavorful paranthas, crafted to satisfy your cravings.
+                    </p>
+                    
+                    <p class="about-description">
+                        Indulge in our signature Amritsari Kulcha, Chur Chur Naan, and hearty Paranthas, each packed with authentic flavors. Complement your meal with delightful sides like Dal Makhani, Paneer Tikka, and our refreshing Pade Wali Lassi.
+                    </p>
+                    
+                    <p class="about-description">
+                        Perfect for families and budget-friendly, we are your go-to spot for a delightful and affordable Punjabi meal.
+                    </p>
+                    
+                    <div class="divider-small"></div>
+                    
+                    <a href="#menu" class="menu-button">See The Menu!</a>
+                </div>
+                
+                <div class="about-images">
+                    <div class="main-image">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Delicious Punjabi Food Spread" 
+                             class="main-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu-section" id="menu">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Menu</h2>
+                <p>Delicious selection of authentic Punjabi dishes</p>
+            </div>
+            
+            <div class="menu-category fade-in">
+                <h3>🔥 Signature Kulchas</h3>
+                <p class="menu-category-desc">Served With Butter, Choley, Pyaz Chutney, Achdar</p>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <div class="item-name-price">
+                                <div class="item-name">Aloo Pyaz Kulcha</div>
+                                <div class="item-price">₹179/-</div>
+                            </div>
+                            <div class="item-desc">Crispy kulcha stuffed with spiced potatoes and onions</div>
+                        </div>
+                        <div class="item-image">
+                            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Aloo Pyaz Kulcha">
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <div class="item-name-price">
+                                <div class="item-name">Gobhi Masala Kulcha</div>
+                                <div class="item-price">₹179/-</div>
+                            </div>
+                            <div class="item-desc">Flaky kulcha filled with spiced cauliflower masala</div>
+                        </div>
+                        <div class="item-image">
+                            <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Gobhi Masala Kulcha">
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <div class="item-name-price">
+                                <div class="item-name">Chana Masala Kulcha</div>
+                                <div class="item-price">₹179/-</div>
+                            </div>
+                            <div class="item-desc">Buttery kulcha stuffed with spicy chickpea filling</div>
+                        </div>
+                        <div class="item-image">
+                            <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Chana Masala Kulcha">
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <div class="item-name-price">
+                                <div class="item-name">Muttar Kulcha</div>
+                                <div class="item-price">₹179/-</div>
+                            </div>
+                            <div class="item-desc">Soft kulcha filled with green pea mixture and spices</div>
+                        </div>
+                        <div class="item-image">
+                            <img src="https://images.unsplash.com/photo-1563379091339-03246963d9d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Muttar Kulcha">
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <div class="item-name-price">
+                                <div class="item-name">Paneer Masala Kulcha</div>
+                                <div class="item-price">₹199/-</div>
+                            </div>
+                            <div class="item-desc">Rich kulcha stuffed with spicy cottage cheese masala</div>
+                        </div>
+                        <div class="item-image">
+                            <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Paneer Masala Kulcha">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="menu-category fade-in">
+                <h3>🧈 Buttery Paranthas</h3>
+                <p class="menu-category-desc">Served With Butter, Pyaz Chutney, Achdar</p>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <div class="item-name-price">
+                                <div class="item-name">Aloo Pyaz Parantha</div>
+                                <div class="item-price">₹179/-</div>
+                            </div>
+                            <div class="item-desc">Golden parantha stuffed with potato and onion filling</div>
+                        </div>
+                        <div class="item-image">
+                            <img src="download.jpg" alt="Aloo Pyaz Parantha">
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <div class="item-name-price">
+                                <div class="item-name">Gobhi Masala Parantha</div>
+                                <div class="item-price">₹179/-</div>
+                            </div>
+                            <div class="item-desc">Flaky parantha filled with spiced cauliflower mixture</div>
+                        </div>
+                        <div class="item-image">
+                            <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Gobhi Masala Parantha">
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <div class="item-name-price">
+                                <div class="item-name">Paneer Masala Parantha</div>
+                                <div class="item-price">₹199/-</div>
+                            </div>
+                            <div class="item-desc">Rich parantha filled with spicy paneer masala</div>
+                        </div>
+                        <div class="item-image">
+                            <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Paneer Masala Parantha">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="menu-category fade-in">
+                <h3>🥖 Traditional Breads</h3>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <div class="item-name-price">
+                                <div class="item-name">Chur Chur Naan</div>
+                                <div class="item-price">₹199/-</div>
+                            </div>
+                            <div class="item-desc">Flaky, layered naan brushed with butter, perfect with creamy dal makhni</div>
+                        </div>
+                        <div class="item-image">
+                            <img src="https://images.unsplash.com/photo-1585937421612-70ca003675ed?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Chur Chur Naan">
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <div class="item-name-price">
+                                <div class="item-name">Butter Naan</div>
+                                <div class="item-price">₹129/-</div>
+                            </div>
+                            <div class="item-desc">Soft leavened bread brushed with butter</div>
+                        </div>
+                        <div class="item-image">
+                            <img src="https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Butter Naan">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Online Section -->
+    <section class="order-section" id="order">
+        <div class="container">
+            <div class="section-title">
+                <h2>Order Online</h2>
+                <p>Order your favorite Punjabi dishes directly from our kitchen</p>
+            </div>
+            
+            <div class="order-container fade-in">
+                <div class="order-steps">
+                    <div class="step active" data-step="1">
+                        <div class="step-number">1</div>
+                        <div class="step-text">Select Food</div>
+                    </div>
+                    <div class="step" data-step="2">
+                        <div class="step-number">2</div>
+                        <div class="step-text">Delivery Info</div>
+                    </div>
+                    <div class="step" data-step="3">
+                        <div class="step-number">3</div>
+                        <div class="step-text">Payment</div>
+                    </div>
+                    <div class="step" data-step="4">
+                        <div class="step-number">4</div>
+                        <div class="step-text">Confirmation</div>
+                    </div>
+                </div>
+                
+                <!-- Step 1: Select Food -->
+                <div class="order-step active" id="step1">
+                    <div class="step-header">
+                        <h3>Select Your Food</h3>
+                        <p>Choose from our delicious menu items</p>
+                    </div>
+                    
+                    <div class="order-categories">
+                        <button class="category-btn active" data-category="kulchas">Kulchas</button>
+                        <button class="category-btn" data-category="paranthas">Paranthas</button>
+                        <button class="category-btn" data-category="breads">Breads</button>
+                    </div>
+                    
+                    <div class="order-menu-items">
+                        <!-- Kulchas Category -->
+                        <div class="menu-category-items active" data-category="kulchas">
+                            <div class="order-item">
+                                <div class="item-select">
+                                    <input type="checkbox" id="kulcha1" data-name="Aloo Pyaz Kulcha" data-price="179" data-category="kulchas">
+                                    <label for="kulcha1"></label>
+                                </div>
+                                <div class="item-details">
+                                    <h4>Aloo Pyaz Kulcha</h4>
+                                    <p>Served with butter, choley, pyaz chutney, achdar</p>
+                                    <div class="item-price">₹179</div>
+                                </div>
+                                <div class="item-quantity">
+                                    <button class="qty-btn minus">-</button>
+                                    <input type="number" class="qty-input" value="0" min="0" max="10" data-item="kulcha1">
+                                    <button class="qty-btn plus">+</button>
+                                </div>
+                            </div>
+                            
+                            <div class="order-item">
+                                <div class="item-select">
+                                    <input type="checkbox" id="kulcha2" data-name="Gobhi Masala Kulcha" data-price="179" data-category="kulchas">
+                                    <label for="kulcha2"></label>
+                                </div>
+                                <div class="item-details">
+                                    <h4>Gobhi Masala Kulcha</h4>
+                                    <p>Served with butter, choley, pyaz chutney, achdar</p>
+                                    <div class="item-price">₹179</div>
+                                </div>
+                                <div class="item-quantity">
+                                    <button class="qty-btn minus">-</button>
+                                    <input type="number" class="qty-input" value="0" min="0" max="10" data-item="kulcha2">
+                                    <button class="qty-btn plus">+</button>
+                                </div>
+                            </div>
+                            
+                            <div class="order-item">
+                                <div class="item-select">
+                                    <input type="checkbox" id="kulcha3" data-name="Chana Masala Kulcha" data-price="179" data-category="kulchas">
+                                    <label for="kulcha3"></label>
+                                </div>
+                                <div class="item-details">
+                                    <h4>Chana Masala Kulcha</h4>
+                                    <p>Served with butter, choley, pyaz chutney, achdar</p>
+                                    <div class="item-price">₹179</div>
+                                </div>
+                                <div class="item-quantity">
+                                    <button class="qty-btn minus">-</button>
+                                    <input type="number" class="qty-input" value="0" min="0" max="10" data-item="kulcha3">
+                                    <button class="qty-btn plus">+</button>
+                                </div>
+                            </div>
+                            
+                            <div class="order-item">
+                                <div class="item-select">
+                                    <input type="checkbox" id="kulcha4" data-name="Muttar Kulcha" data-price="179" data-category="kulchas">
+                                    <label for="kulcha4"></label>
+                                </div>
+                                <div class="item-details">
+                                    <h4>Muttar Kulcha</h4>
+                                    <p>Served with butter, choley, pyaz chutney, achdar</p>
+                                    <div class="item-price">₹179</div>
+                                </div>
+                                <div class="item-quantity">
+                                    <button class="qty-btn minus">-</button>
+                                    <input type="number" class="qty-input" value="0" min="0" max="10" data-item="kulcha4">
+                                    <button class="qty-btn plus">+</button>
+                                </div>
+                            </div>
+                            
+                            <div class="order-item">
+                                <div class="item-select">
+                                    <input type="checkbox" id="kulcha5" data-name="Paneer Masala Kulcha" data-price="199" data-category="kulchas">
+                                    <label for="kulcha5"></label>
+                                </div>
+                                <div class="item-details">
+                                    <h4>Paneer Masala Kulcha</h4>
+                                    <p>Served with butter, choley, pyaz chutney, achdar</p>
+                                    <div class="item-price">₹199</div>
+                                </div>
+                                <div class="item-quantity">
+                                    <button class="qty-btn minus">-</button>
+                                    <input type="number" class="qty-input" value="0" min="0" max="10" data-item="kulcha5">
+                                    <button class="qty-btn plus">+</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Paranthas Category -->
+                        <div class="menu-category-items" data-category="paranthas">
+                            <div class="order-item">
+                                <div class="item-select">
+                                    <input type="checkbox" id="parantha1" data-name="Aloo Pyaz Parantha" data-price="179" data-category="paranthas">
+                                    <label for="parantha1"></label>
+                                </div>
+                                <div class="item-details">
+                                    <h4>Aloo Pyaz Parantha</h4>
+                                    <p>Served with butter, pyaz chutney, achdar</p>
+                                    <div class="item-price">₹179</div>
+                                </div>
+                                <div class="item-quantity">
+                                    <button class="qty-btn minus">-</button>
+                                    <input type="number" class="qty-input" value="0" min="0" max="10" data-item="parantha1">
+                                    <button class="qty-btn plus">+</button>
+                                </div>
+                            </div>
+                            
+                            <div class="order-item">
+                                <div class="item-select">
+                                    <input type="checkbox" id="parantha2" data-name="Gobhi Masala Parantha" data-price="179" data-category="paranthas">
+                                    <label for="parantha2"></label>
+                                </div>
+                                <div class="item-details">
+                                    <h4>Gobhi Masala Parantha</h4>
+                                    <p>Served with butter, pyaz chutney, achdar</p>
+                                    <div class="item-price">₹179</div>
+                                </div>
+                                <div class="item-quantity">
+                                    <button class="qty-btn minus">-</button>
+                                    <input type="number" class="qty-input" value="0" min="0" max="10" data-item="parantha2">
+                                    <button class="qty-btn plus">+</button>
+                                </div>
+                            </div>
+                            
+                            <div class="order-item">
+                                <div class="item-select">
+                                    <input type="checkbox" id="parantha3" data-name="Paneer Masala Parantha" data-price="199" data-category="paranthas">
+                                    <label for="parantha3"></label>
+                                </div>
+                                <div class="item-details">
+                                    <h4>Paneer Masala Parantha</h4>
+                                    <p>Served with butter, pyaz chutney, achdar</p>
+                                    <div class="item-price">₹199</div>
+                                </div>
+                                <div class="item-quantity">
+                                    <button class="qty-btn minus">-</button>
+                                    <input type="number" class="qty-input" value="0" min="0" max="10" data-item="parantha3">
+                                    <button class="qty-btn plus">+</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Breads Category -->
+                        <div class="menu-category-items" data-category="breads">
+                            <div class="order-item">
+                                <div class="item-select">
+                                    <input type="checkbox" id="bread1" data-name="Chur Chur Naan" data-price="199" data-category="breads">
+                                    <label for="bread1"></label>
+                                </div>
+                                <div class="item-details">
+                                    <h4>Chur Chur Naan</h4>
+                                    <p>Flaky, layered naan brushed with butter</p>
+                                    <div class="item-price">₹199</div>
+                                </div>
+                                <div class="item-quantity">
+                                    <button class="qty-btn minus">-</button>
+                                    <input type="number" class="qty-input" value="0" min="0" max="10" data-item="bread1">
+                                    <button class="qty-btn plus">+</button>
+                                </div>
+                            </div>
+                            
+                            <div class="order-item">
+                                <div class="item-select">
+                                    <input type="checkbox" id="bread2" data-name="Butter Naan" data-price="129" data-category="breads">
+                                    <label for="bread2"></label>
+                                </div>
+                                <div class="item-details">
+                                    <h4>Butter Naan</h4>
+                                    <p>Soft leavened bread brushed with butter</p>
+                                    <div class="item-price">₹129</div>
+                                </div>
+                                <div class="item-quantity">
+                                    <button class="qty-btn minus">-</button>
+                                    <input type="number" class="qty-input" value="0" min="0" max="10" data-item="bread2">
+                                    <button class="qty-btn plus">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="order-summary">
+                        <h4>Your Order Summary</h4>
+                        <div class="summary-items" id="summaryItems">
+                            <div class="empty-cart">No items selected yet</div>
+                        </div>
+                        <div class="summary-total">
+                            <div class="total-line">
+                                <span>Subtotal:</span>
+                                <span id="subtotal">₹0</span>
+                            </div>
+                            <div class="total-line">
+                                <span>Delivery Charge:</span>
+                                <span id="deliveryCharge">₹30</span>
+                            </div>
+                            <div class="total-line grand-total">
+                                <span>Total:</span>
+                                <span id="grandTotal">₹30</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step-actions">
+                        <button class="btn btn-primary next-step" data-next="2">Continue to Delivery →</button>
+                    </div>
+                </div>
+                
+                <!-- Step 2: Delivery Information -->
+                <div class="order-step" id="step2">
+                    <div class="step-header">
+                        <h3>Delivery Information</h3>
+                        <p>Tell us where and when to deliver your order</p>
+                    </div>
+                    
+                    <div class="delivery-options">
+                        <div class="delivery-type">
+                            <h4>Select Order Type</h4>
+                            <div class="type-options">
+                                <label class="type-option">
+                                    <input type="radio" name="orderType" value="delivery" checked>
+                                    <div class="option-content">
+                                        <i class="fas fa-motorcycle"></i>
+                                        <span>Home Delivery</span>
+                                        <small>Delivered to your address (₹30 delivery charge)</small>
+                                    </div>
+                                </label>
+                                <label class="type-option">
+                                    <input type="radio" name="orderType" value="pickup">
+                                    <div class="option-content">
+                                        <i class="fas fa-store"></i>
+                                        <span>Pickup</span>
+                                        <small>Collect from restaurant (No delivery charge)</small>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="delivery-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="customerName">Full Name *</label>
+                                    <input type="text" id="customerName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="customerPhone">Phone Number *</label>
+                                    <input type="tel" id="customerPhone" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="customerEmail">Email Address</label>
+                                <input type="email" id="customerEmail">
+                            </div>
+                            
+                            <div class="form-group" id="addressGroup">
+                                <label for="deliveryAddress">Delivery Address *</label>
+                                <textarea id="deliveryAddress" rows="3" required></textarea>
+                                <small>Please include house number, street, and landmark</small>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="deliveryDate">Delivery Date *</label>
+                                    <input type="date" id="deliveryDate" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="deliveryTime">Delivery Time *</label>
+                                    <select id="deliveryTime" required>
+                                        <option value="">Select Time</option>
+                                        <option value="13:30">1:30 PM</option>
+                                        <option value="14:00">2:00 PM</option>
+                                        <option value="14:30">2:30 PM</option>
+                                        <option value="15:00">3:00 PM</option>
+                                        <option value="18:00">6:00 PM</option>
+                                        <option value="18:30">6:30 PM</option>
+                                        <option value="19:00">7:00 PM</option>
+                                        <option value="19:30">7:30 PM</option>
+                                        <option value="20:00">8:00 PM</option>
+                                        <option value="20:30">8:30 PM</option>
+                                        <option value="21:00">9:00 PM</option>
+                                        <option value="21:30">9:30 PM</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="specialInstructions">Special Instructions</label>
+                                <textarea id="specialInstructions" rows="2" placeholder="Any allergies, spice preferences, or delivery instructions"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step-actions">
+                        <button class="btn btn-secondary prev-step" data-prev="1">← Back to Menu</button>
+                        <button class="btn btn-primary next-step" data-next="3">Continue to Payment →</button>
+                    </div>
+                </div>
+                
+                <!-- Step 3: Payment -->
+                <div class="order-step" id="step3">
+                    <div class="step-header">
+                        <h3>Payment Method</h3>
+                        <p>Choose how you'd like to pay</p>
+                    </div>
+                    
+                    <div class="payment-options">
+                        <div class="payment-method">
+                            <label class="payment-option">
+                                <input type="radio" name="paymentMethod" value="cod" checked>
+                                <div class="option-content">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                    <span>Cash on Delivery</span>
+                                    <small>Pay when you receive your order</small>
+                                </div>
+                            </label>
+                        </div>
+                        
+                        <div class="order-review">
+                            <h4>Order Review</h4>
+                            <div class="review-items" id="reviewItems">
+                                <!-- Order items will be populated here -->
+                            </div>
+                            <div class="review-total">
+                                <div class="total-line">
+                                    <span>Order Total:</span>
+                                    <span id="reviewTotal">₹0</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="terms-agreement">
+                            <label>
+                                <input type="checkbox" id="agreeTerms" required>
+                                <span>I agree to the <a href="#" id="termsLink">Terms & Conditions</a> and confirm that all information provided is correct</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="step-actions">
+                        <button class="btn btn-secondary prev-step" data-prev="2">← Back to Delivery</button>
+                        <button class="btn btn-primary" id="placeOrderBtn">Place Order</button>
+                    </div>
+                </div>
+                
+                <!-- Step 4: Confirmation -->
+                <div class="order-step" id="step4">
+                    <div class="confirmation-content">
+                        <div class="confirmation-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>Order Confirmed!</h3>
+                        <p class="order-number">Order #: <span id="orderNumber">KKPS-</span></p>
+                        <p>Thank you for your order! We've received it and will start preparing your food.</p>
+                        
+                        <div class="order-details-confirm">
+                            <h4>Order Details</h4>
+                            <div id="orderDetailsConfirm">
+                                <!-- Order details will be populated here -->
+                            </div>
+                        </div>
+                        
+                        <div class="confirmation-actions">
+                            <p>We'll send you a confirmation SMS shortly.</p>
+                            <button class="btn btn-primary" id="newOrderBtn">Start New Order</button>
+                            <a href="tel:+918949019457" class="btn btn-secondary">
+                                <i class="fas fa-phone"></i> Call Us: +91 89490 19457
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Customers Say</h2>
+                <p>Don't just take our word for it - hear from our satisfied customers</p>
+            </div>
+            
+            <div class="testimonial-slider">
+                <div class="testimonial-container">
+                    <div class="testimonial-slide active" id="slide1">
+                        <div class="testimonial-text">
+                            "In one word.... Amazing!!! and in actual terms, 'Punjabi sach m Jaipur aa gaye oye' A must must try."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">LG</div>
+                            <div class="author-info">
+                                <h4>LALIT GURNANI</h4>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-slide" id="slide2">
+                        <div class="testimonial-text">
+                            "Definitely a must visit place for some amazing kulchas. The kulchas were super crispy. Love it."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">JS</div>
+                            <div class="author-info">
+                                <h4>JAIYEER SINGH YADAV</h4>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-slide" id="slide3">
+                        <div class="testimonial-text">
+                            "Mouth watering food I can't wait more to see you again."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">YG</div>
+                            <div class="author-info">
+                                <h4>YASH GUPTA</h4>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-slide" id="slide4">
+                        <div class="testimonial-text">
+                            "They offers exceptional food quality with fresh ingredients...Must visit...."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">SG</div>
+                            <div class="author-info">
+                                <h4>SURBHI GUPTA</h4>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slider-controls">
+                    <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                    <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Experience the true taste of Punjab with our crispy kulchas, flavorful paranthas, and authentic Punjabi delicacies.</p>
+            </div>
+            
+            <div class="contact-info">
+                <div class="contact-card fade-in">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Call Us</h3>
+                    <div class="contact-details">
+                        <p><strong>Primary:</strong> <a href="tel:+918949019457" class="contact-link">+91 89490 19457</a></p>
+                        <p><strong>Secondary:</strong> <a href="tel:+918826680401" class="contact-link">+91 88266 80401</a></p>
+                        <p><strong>Email:</strong> <a href="mailto:kulchakingsoranthasingh@gmail.com" class="contact-link">kulchakingsoranthasingh@gmail.com</a></p>
+                    </div>
+                </div>
+                
+                <div class="contact-card fade-in">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Our Location</h3>
+                    <div class="contact-details">
+                        <p>79/113, Shipra Path, Mansarovar Sector 7,</p>
+                        <p>Shipra Path, Bath Devaniya, Mansarovar,</p>
+                        <p>Jaipur, Rajasthan 302020</p>
+                        <div style="margin-top: 20px;">
+                            <a href="https://maps.google.com/?q=Kulcha+King+Parantha+Singh+Jaipur" target="_blank" class="btn btn-secondary">
+                                <i class="fas fa-map"></i> View on Google Maps
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-card fade-in">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Opening Hours</h3>
+                    <div class="contact-details">
+                        <h4 style="margin-top: 10px; margin-bottom: 15px;">Monday - Sunday</h4>
+                        <p><strong>Lunch & Dinner:</strong> 1:30 PM - 10:30 PM</p>
+                        <p class="note">*Please note: The restaurant opens at 10:30 PM, not 8:30 AM</p>
+                        
+                        <div class="social-section" style="margin-top: 25px;">
+                            <h4>Follow Us</h4>
+                            <div class="social-icons contact-social">
+                                <a href="#" class="social-icon" id="instagram-link" title="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="social-icon" id="facebook-link" title="Facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="social-icon" id="tripadvisor-link" title="TripAdvisor">
+                                    <i class="fab fa-tripadvisor"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Kulcha King & Parantha Singh</h3>
+                    <p>Bringing authentic Punjabi flavors to your plate since 2010. Experience the taste of Punjab with our traditional recipes and warm hospitality.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#order">Order Online</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Popular Dishes</h3>
+                    <ul class="footer-links">
+                        <li><a href="#menu">Amritsari Kulcha</a></li>
+                        <li><a href="#menu">Chur Chur Naan</a></li>
+                        <li><a href="#menu">Paneer Parantha</a></li>
+                        <li><a href="#menu">Dal Makhni</a></li>
+                        <li><a href="#menu">Pede Wali Lassi</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Kulcha King & Parantha Singh. All rights reserved. | Designed with <i class="fas fa-heart" style="color: var(--deep-red);"></i> for food lovers</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Testimonial Slider
+        const slides = document.querySelectorAll('.testimonial-slide');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        let currentSlide = 0;
+        
+        function showSlide(n) {
+            slides.forEach(slide => {
+                slide.classList.remove('active');
+            });
+            
+            currentSlide = (n + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+        
+        prevBtn.addEventListener('click', () => {
+            showSlide(currentSlide - 1);
+        });
+        
+        nextBtn.addEventListener('click', () => {
+            showSlide(currentSlide + 1);
+        });
+        
+        setInterval(() => {
+            showSlide(currentSlide + 1);
+        }, 5000);
+        
+        // Scroll animations
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        function checkScroll() {
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', checkScroll);
+        window.addEventListener('load', checkScroll);
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Social Media Links
+        document.getElementById('instagram-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            const instagramUrl = prompt('Please enter your Instagram URL:', 'https://instagram.com/yourrestaurant');
+            if(instagramUrl && instagramUrl !== 'https://instagram.com/yourrestaurant') {
+                this.href = instagramUrl;
+                window.open(instagramUrl, '_blank');
+            }
+        });
+        
+        document.getElementById('facebook-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            const facebookUrl = prompt('Please enter your Facebook URL:', 'https://facebook.com/yourrestaurant');
+            if(facebookUrl && facebookUrl !== 'https://facebook.com/yourrestaurant') {
+                this.href = facebookUrl;
+                window.open(facebookUrl, '_blank');
+            }
+        });
+        
+        document.getElementById('tripadvisor-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            const tripadvisorUrl = prompt('Please enter your TripAdvisor URL:', 'https://tripadvisor.com/yourrestaurant');
+            if(tripadvisorUrl && tripadvisorUrl !== 'https://tripadvisor.com/yourrestaurant') {
+                this.href = tripadvisorUrl;
+                window.open(tripadvisorUrl, '_blank');
+            }
+        });
+        
+        // Footer social media links
+        document.querySelectorAll('.footer-column .social-icon').forEach(icon => {
+            icon.addEventListener('click', function(e) {
+                e.preventDefault();
+                const platform = this.querySelector('i').className;
+                let urlPrompt = '';
+                
+                if(platform.includes('instagram')) {
+                    urlPrompt = 'https://instagram.com/yourrestaurant';
+                } else if(platform.includes('facebook')) {
+                    urlPrompt = 'https://facebook.com/yourrestaurant';
+                } else if(platform.includes('twitter')) {
+                    urlPrompt = 'https://twitter.com/yourrestaurant';
+                } else if(platform.includes('youtube')) {
+                    urlPrompt = 'https://youtube.com/yourrestaurant';
+                }
+                
+                const socialUrl = prompt(`Please enter your ${platform.split('-')[1]} URL:`, urlPrompt);
+                if(socialUrl && socialUrl !== urlPrompt) {
+                    this.href = socialUrl;
+                    window.open(socialUrl, '_blank');
+                }
+            });
+        });
+        
+        // Order System JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            const orderSystem = new OrderSystem();
+            orderSystem.init();
+        });
+        
+        class OrderSystem {
+            constructor() {
+                this.cart = [];
+                this.currentStep = 1;
+                this.orderType = 'delivery';
+                this.orderData = {};
+                this.orderNumber = this.generateOrderNumber();
+            }
+            
+            init() {
+                this.setupCategoryTabs();
+                this.setupItemSelection();
+                this.setupQuantityControls();
+                this.setupStepNavigation();
+                this.setupOrderTypeToggle();
+                this.setupPlaceOrder();
+                this.setupTermsModal();
+                this.updateCartSummary();
+                this.setMinDeliveryDate();
+                this.updateOrderNumber();
+            }
+            
+            generateOrderNumber() {
+                const prefix = 'KKPS-';
+                const randomNum = Math.floor(1000 + Math.random() * 9000);
+                const date = new Date().getDate().toString().padStart(2, '0');
+                const month = (new Date().getMonth() + 1).toString().padStart(2, '0');
+                return `${prefix}${date}${month}${randomNum}`;
+            }
+            
+            updateOrderNumber() {
+                document.getElementById('orderNumber').textContent = this.orderNumber;
+            }
+            
+            setMinDeliveryDate() {
+                const today = new Date();
+                const tomorrow = new Date(today);
+                tomorrow.setDate(tomorrow.getDate() + 1);
+                const minDate = tomorrow.toISOString().split('T')[0];
+                const dateInput = document.getElementById('deliveryDate');
+                if (dateInput) {
+                    dateInput.min = minDate;
+                    dateInput.value = minDate;
+                }
+            }
+            
+            setupCategoryTabs() {
+                const categoryBtns = document.querySelectorAll('.category-btn');
+                categoryBtns.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        categoryBtns.forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
+                        
+                        const menuCategories = document.querySelectorAll('.menu-category-items');
+                        menuCategories.forEach(cat => cat.classList.remove('active'));
+                        
+                        const category = btn.getAttribute('data-category');
+                        const selectedCategory = document.querySelector(`.menu-category-items[data-category="${category}"]`);
+                        if (selectedCategory) {
+                            selectedCategory.classList.add('active');
+                        }
+                    });
+                });
+            }
+            
+            setupItemSelection() {
+                const checkboxes = document.querySelectorAll('.item-select input[type="checkbox"]');
+                checkboxes.forEach(checkbox => {
+                    checkbox.addEventListener('change', (e) => {
+                        const itemId = e.target.id;
+                        const itemName = e.target.getAttribute('data-name');
+                        const itemPrice = parseInt(e.target.getAttribute('data-price'));
+                        const category = e.target.getAttribute('data-category');
+                        
+                        if (e.target.checked) {
+                            this.addToCart(itemId, itemName, itemPrice, category);
+                        } else {
+                            this.removeFromCart(itemId);
+                        }
+                        this.updateCartSummary();
+                    });
+                });
+            }
+            
+            setupQuantityControls() {
+                document.querySelectorAll('.qty-btn').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const inputId = e.target.parentElement.querySelector('.qty-input').getAttribute('data-item');
+                        const input = document.querySelector(`.qty-input[data-item="${inputId}"]`);
+                        const checkbox = document.getElementById(inputId);
+                        
+                        if (e.target.classList.contains('plus')) {
+                            input.value = parseInt(input.value) + 1;
+                        } else if (e.target.classList.contains('minus') && parseInt(input.value) > 0) {
+                            input.value = parseInt(input.value) - 1;
+                        }
+                        
+                        if (parseInt(input.value) > 0 && !checkbox.checked) {
+                            checkbox.checked = true;
+                            checkbox.dispatchEvent(new Event('change'));
+                        } else if (parseInt(input.value) === 0 && checkbox.checked) {
+                            checkbox.checked = false;
+                            checkbox.dispatchEvent(new Event('change'));
+                        }
+                        
+                        this.updateCartItemQuantity(inputId, parseInt(input.value));
+                        this.updateCartSummary();
+                    });
+                });
+                
+                document.querySelectorAll('.qty-input').forEach(input => {
+                    input.addEventListener('change', (e) => {
+                        const itemId = e.target.getAttribute('data-item');
+                        const quantity = parseInt(e.target.value) || 0;
+                        const checkbox = document.getElementById(itemId);
+                        
+                        if (quantity > 0 && !checkbox.checked) {
+                            checkbox.checked = true;
+                            checkbox.dispatchEvent(new Event('change'));
+                        } else if (quantity === 0 && checkbox.checked) {
+                            checkbox.checked = false;
+                            checkbox.dispatchEvent(new Event('change'));
+                        }
+                        
+                        this.updateCartItemQuantity(itemId, quantity);
+                        this.updateCartSummary();
+                    });
+                });
+            }
+            
+            addToCart(itemId, name, price, category) {
+                const existingItemIndex = this.cart.findIndex(item => item.id === itemId);
+                
+                if (existingItemIndex > -1) {
+                    const input = document.querySelector(`.qty-input[data-item="${itemId}"]`);
+                    this.cart[existingItemIndex].quantity = parseInt(input.value) || 1;
+                } else {
+                    this.cart.push({
+                        id: itemId,
+                        name: name,
+                        price: price,
+                        quantity: 1,
+                        category: category
+                    });
+                    
+                    const input = document.querySelector(`.qty-input[data-item="${itemId}"]`);
+                    if (input) input.value = 1;
+                }
+            }
+            
+            removeFromCart(itemId) {
+                const itemIndex = this.cart.findIndex(item => item.id === itemId);
+                if (itemIndex > -1) {
+                    this.cart.splice(itemIndex, 1);
+                    
+                    const input = document.querySelector(`.qty-input[data-item="${itemId}"]`);
+                    if (input) input.value = 0;
+                }
+            }
+            
+            updateCartItemQuantity(itemId, quantity) {
+                const itemIndex = this.cart.findIndex(item => item.id === itemId);
+                if (itemIndex > -1) {
+                    if (quantity > 0) {
+                        this.cart[itemIndex].quantity = quantity;
+                    } else {
+                        this.cart.splice(itemIndex, 1);
+                    }
+                }
+            }
+            
+            updateCartSummary() {
+                const summaryItems = document.getElementById('summaryItems');
+                const subtotalEl = document.getElementById('subtotal');
+                const grandTotalEl = document.getElementById('grandTotal');
+                
+                if (this.cart.length === 0) {
+                    summaryItems.innerHTML = '<div class="empty-cart">No items selected yet</div>';
+                    subtotalEl.textContent = '₹0';
+                    grandTotalEl.textContent = '₹30';
+                    return;
+                }
+                
+                let subtotal = 0;
+                let itemsHTML = '';
+                
+                this.cart.forEach(item => {
+                    const itemTotal = item.price * item.quantity;
+                    subtotal += itemTotal;
+                    
+                    itemsHTML += `
+                        <div class="summary-item">
+                            <div class="summary-item-name">
+                                <div class="summary-item-qty">${item.quantity}</div>
+                                <div>${item.name}</div>
+                            </div>
+                            <div>₹${itemTotal}</div>
+                        </div>
+                    `;
+                });
+                
+                summaryItems.innerHTML = itemsHTML;
+                subtotalEl.textContent = `₹${subtotal}`;
+                
+                const deliveryCharge = this.orderType === 'delivery' ? 30 : 0;
+                const grandTotal = subtotal + deliveryCharge;
+                document.getElementById('deliveryCharge').textContent = `₹${deliveryCharge}`;
+                grandTotalEl.textContent = `₹${grandTotal}`;
+                
+                this.updateReviewItems(subtotal, grandTotal);
+            }
+            
+            updateReviewItems(subtotal, grandTotal) {
+                const reviewItems = document.getElementById('reviewItems');
+                const reviewTotal = document.getElementById('reviewTotal');
+                
+                if (this.cart.length === 0) {
+                    reviewItems.innerHTML = '<div class="empty-cart">No items selected</div>';
+                    reviewTotal.textContent = '₹0';
+                    return;
+                }
+                
+                let itemsHTML = '';
+                
+                this.cart.forEach(item => {
+                    const itemTotal = item.price * item.quantity;
+                    itemsHTML += `
+                        <div class="review-item">
+                            <div>${item.quantity}x ${item.name}</div>
+                            <div>₹${itemTotal}</div>
+                        </div>
+                    `;
+                });
+                
+                reviewItems.innerHTML = itemsHTML;
+                reviewTotal.textContent = `₹${grandTotal}`;
+            }
+            
+            setupStepNavigation() {
+                document.querySelectorAll('.next-step').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const nextStep = parseInt(e.target.getAttribute('data-next'));
+                        if (this.validateStep(this.currentStep)) {
+                            this.goToStep(nextStep);
+                        }
+                    });
+                });
+                
+                document.querySelectorAll('.prev-step').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const prevStep = parseInt(e.target.getAttribute('data-prev'));
+                        this.goToStep(prevStep);
+                    });
+                });
+                
+                document.getElementById('newOrderBtn')?.addEventListener('click', () => {
+                    this.resetOrder();
+                    this.goToStep(1);
+                });
+            }
+            
+            validateStep(step) {
+                if (step === 1) {
+                    if (this.cart.length === 0) {
+                        alert('Please select at least one item to continue.');
+                        return false;
+                    }
+                    return true;
+                } else if (step === 2) {
+                    const name = document.getElementById('customerName').value.trim();
+                    const phone = document.getElementById('customerPhone').value.trim();
+                    const date = document.getElementById('deliveryDate').value;
+                    const time = document.getElementById('deliveryTime').value;
+                    
+                    if (!name) {
+                        alert('Please enter your name.');
+                        return false;
+                    }
+                    
+                    if (!phone || phone.length < 10) {
+                        alert('Please enter a valid phone number.');
+                        return false;
+                    }
+                    
+                    if (this.orderType === 'delivery') {
+                        const address = document.getElementById('deliveryAddress').value.trim();
+                        if (!address) {
+                            alert('Please enter your delivery address.');
+                            return false;
+                        }
+                    }
+                    
+                    if (!date) {
+                        alert('Please select a delivery date.');
+                        return false;
+                    }
+                    
+                    if (!time) {
+                        alert('Please select a delivery time.');
+                        return false;
+                    }
+                    
+                    this.orderData = {
+                        name: name,
+                        phone: phone,
+                        email: document.getElementById('customerEmail').value.trim(),
+                        address: this.orderType === 'delivery' ? document.getElementById('deliveryAddress').value.trim() : 'Pickup',
+                        date: date,
+                        time: time,
+                        instructions: document.getElementById('specialInstructions').value.trim(),
+                        orderType: this.orderType
+                    };
+                    
+                    return true;
+                } else if (step === 3) {
+                    const agreeTerms = document.getElementById('agreeTerms').checked;
+                    if (!agreeTerms) {
+                        alert('Please agree to the Terms & Conditions to place your order.');
+                        return false;
+                    }
+                    return true;
+                }
+                return true;
+            }
+            
+            goToStep(step) {
+                document.querySelectorAll('.order-step').forEach(el => {
+                    el.classList.remove('active');
+                });
+                
+                document.querySelectorAll('.step').forEach(el => {
+                    el.classList.remove('active');
+                });
+                
+                const stepElement = document.getElementById(`step${step}`);
+                const stepIndicator = document.querySelector(`.step[data-step="${step}"]`);
+                
+                if (stepElement) {
+                    stepElement.classList.add('active');
+                }
+                
+                if (stepIndicator) {
+                    stepIndicator.classList.add('active');
+                }
+                
+                this.currentStep = step;
+                
+                if (step === 4) {
+                    this.showConfirmation();
+                }
+            }
+            
+            setupOrderTypeToggle() {
+                const orderTypeRadios = document.querySelectorAll('input[name="orderType"]');
+                const addressGroup = document.getElementById('addressGroup');
+                
+                orderTypeRadios.forEach(radio => {
+                    radio.addEventListener('change', (e) => {
+                        this.orderType = e.target.value;
+                        
+                        if (this.orderType === 'pickup') {
+                            addressGroup.style.display = 'none';
+                            document.getElementById('deliveryAddress').required = false;
+                        } else {
+                            addressGroup.style.display = 'block';
+                            document.getElementById('deliveryAddress').required = true;
+                        }
+                        
+                        this.updateCartSummary();
+                    });
+                });
+            }
+            
+            setupPlaceOrder() {
+                document.getElementById('placeOrderBtn')?.addEventListener('click', () => {
+                    if (this.validateStep(3)) {
+                        this.placeOrder();
+                    }
+                });
+            }
+            
+            placeOrder() {
+                const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked').value;
+                
+                this.orderData.paymentMethod = paymentMethod;
+                this.orderData.items = [...this.cart];
+                this.orderData.subtotal = this.calculateSubtotal();
+                this.orderData.deliveryCharge = this.orderType === 'delivery' ? 30 : 0;
+                this.orderData.total = this.orderData.subtotal + this.orderData.deliveryCharge;
+                this.orderData.orderNumber = this.orderNumber;
+                
+                console.log('Order placed:', this.orderData);
+                
+                this.goToStep(4);
+                
+                this.sendOrderNotification();
+            }
+            
+            sendOrderNotification() {
+                const phone = this.orderData.phone;
+                const orderDetails = this.formatOrderForNotification();
+                
+                alert(`Order placed successfully!\n\nOrder #: ${this.orderNumber}\n\nWe have received your order and will contact you shortly at ${phone}.\n\nYou can also call us at +91 89490 19457 for any queries.`);
+                
+                const whatsappMessage = `New Order Received!\n\nOrder #: ${this.orderNumber}\nCustomer: ${this.orderData.name}\nPhone: ${this.orderData.phone}\nOrder Type: ${this.orderData.orderType}\nTotal: ₹${this.orderData.total}\n\nItems:\n${orderDetails}`;
+                
+                const whatsappUrl = `https://wa.me/918949019457?text=${encodeURIComponent(whatsappMessage)}`;
+                
+                setTimeout(() => {
+                    window.open(whatsappUrl, '_blank');
+                }, 1000);
+            }
+            
+            formatOrderForNotification() {
+                let itemsText = '';
+                this.cart.forEach(item => {
+                    itemsText += `${item.quantity}x ${item.name} - ₹${item.price * item.quantity}\n`;
+                });
+                return itemsText;
+            }
+            
+            showConfirmation() {
+                const orderNumberEl = document.getElementById('orderNumber');
+                const orderDetailsEl = document.getElementById('orderDetailsConfirm');
+                
+                orderNumberEl.textContent = this.orderNumber;
+                
+                let detailsHTML = `
+                    <p><strong>Customer:</strong> ${this.orderData.name}</p>
+                    <p><strong>Phone:</strong> ${this.orderData.phone}</p>
+                    <p><strong>Order Type:</strong> ${this.orderData.orderType === 'delivery' ? 'Home Delivery' : 'Pickup'}</p>
+                    <p><strong>Delivery Date:</strong> ${this.orderData.date}</p>
+                    <p><strong>Delivery Time:</strong> ${this.orderData.time}</p>
+                    ${this.orderData.orderType === 'delivery' ? `<p><strong>Address:</strong> ${this.orderData.address}</p>` : ''}
+                    <p><strong>Payment Method:</strong> ${this.orderData.paymentMethod === 'cod' ? 'Cash on Delivery' : 'Online Payment'}</p>
+                    <h5 style="margin-top: 15px; margin-bottom: 10px;">Order Items:</h5>
+                `;
+                
+                this.cart.forEach(item => {
+                    detailsHTML += `<p>${item.quantity}x ${item.name} - ₹${item.price * item.quantity}</p>`;
+                });
+                
+                detailsHTML += `
+                    <div style="margin-top: 15px; padding-top: 15px; border-top: 2px solid #ddd;">
+                        <p><strong>Subtotal:</strong> ₹${this.orderData.subtotal}</p>
+                        <p><strong>Delivery Charge:</strong> ₹${this.orderData.deliveryCharge}</p>
+                        <p><strong>Total Amount:</strong> ₹${this.orderData.total}</p>
+                    </div>
+                `;
+                
+                orderDetailsEl.innerHTML = detailsHTML;
+            }
+            
+            calculateSubtotal() {
+                return this.cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+            }
+            
+            setupTermsModal() {
+                document.getElementById('termsLink')?.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    this.showTermsModal();
+                });
+            }
+            
+            showTermsModal() {
+                const terms = `
+                    <h3>Terms & Conditions</h3>
+                    <ol>
+                        <li>Orders must be placed at least 2 hours before the desired delivery/pickup time.</li>
+                        <li>Delivery is available within a 5km radius of our restaurant.</li>
+                        <li>For orders outside delivery area, pickup option is available.</li>
+                        <li>Delivery charges may vary based on distance.</li>
+                        <li>We accept Cash on Delivery and online payments.</li>
+                        <li>For any cancellations, please call us at least 1 hour before delivery time.</li>
+                        <li>We reserve the right to modify menu items based on availability.</li>
+                        <li>Prices are inclusive of all taxes.</li>
+                        <li>For any complaints or feedback, please call us at +91 89490 19457.</li>
+                    </ol>
+                    <p>By placing an order, you agree to these terms and conditions.</p>
+                `;
+                
+                alert(terms);
+            }
+            
+            resetOrder() {
+                this.cart = [];
+                this.orderData = {};
+                this.orderNumber = this.generateOrderNumber();
+                
+                document.querySelectorAll('.item-select input[type="checkbox"]').forEach(cb => {
+                    cb.checked = false;
+                });
+                
+                document.querySelectorAll('.qty-input').forEach(input => {
+                    input.value = 0;
+                });
+                
+                document.getElementById('customerName').value = '';
+                document.getElementById('customerPhone').value = '';
+                document.getElementById('customerEmail').value = '';
+                document.getElementById('deliveryAddress').value = '';
+                document.getElementById('specialInstructions').value = '';
+                document.getElementById('agreeTerms').checked = false;
+                
+                this.updateOrderNumber();
+                this.updateCartSummary();
+                this.setMinDeliveryDate();
+            }
+        }
+    </script>
+</body>
+</html>
