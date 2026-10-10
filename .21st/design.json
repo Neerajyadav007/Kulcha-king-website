@@ -1,0 +1,162 @@
+{
+  "version": 1,
+  "project": {
+    "name": "kulcha-king-website",
+    "productType": null,
+    "stack": [
+      "react",
+      "tailwind-v3",
+      "vite"
+    ]
+  },
+  "sources": {
+    "tokens": [
+      "src/index.css"
+    ],
+    "components": [
+      "components/ui",
+      "src/components/ui"
+    ],
+    "assets": [],
+    "instructions": []
+  },
+  "design": {
+    "colorMode": "light-and-dark",
+    "colors": {
+      "--background": {
+        "value": "#fcfbf9 !important",
+        "source": "src/index.css"
+      },
+      "--foreground": {
+        "value": "#0f172a !important",
+        "source": "src/index.css"
+      },
+      "--card-foreground": {
+        "value": "#0f172a",
+        "source": "src/index.css"
+      },
+      "--border": {
+        "value": "rgba(15, 23, 42, 0.1)",
+        "source": "src/index.css"
+      },
+      "--muted": {
+        "value": "#f1f5f9",
+        "source": "src/index.css"
+      },
+      "--muted-foreground": {
+        "value": "#64748b",
+        "source": "src/index.css"
+      },
+      "--primary": {
+        "value": "#d97706",
+        "source": "src/index.css"
+      },
+      "--primary-foreground": {
+        "value": "#ffffff",
+        "source": "src/index.css"
+      },
+      "--ring": {
+        "value": "#d97706",
+        "source": "src/index.css"
+      },
+      "--text-primary": {
+        "value": "#0f172a",
+        "source": "src/index.css"
+      },
+      "--text-secondary": {
+        "value": "#334155",
+        "source": "src/index.css"
+      }
+    },
+    "typography": {
+      "--elegant-font": {
+        "value": "'Great Vibes', cursive",
+        "source": "src/index.css"
+      },
+      "--font-serif": {
+        "value": "'Libre Caslon Condensed', 'Playfair Display', Georgia, serif",
+        "source": "src/index.css"
+      },
+      "--font-noto": {
+        "value": "'Plus Jakarta Sans', system-ui, sans-serif",
+        "source": "src/index.css"
+      },
+      "--font-signika": {
+        "value": "'Signika', sans-serif",
+        "source": "src/index.css"
+      },
+      "--font-dm-sans": {
+        "value": "'DM Sans', sans-serif",
+        "source": "src/index.css"
+      }
+    },
+    "spacing": {},
+    "radius": {},
+    "shadows": {},
+    "motion": {},
+    "density": "unknown"
+  },
+  "components": {
+    "installed": [
+      "accordion",
+      "button",
+      "demo",
+      "demo-faqs",
+      "demo-hero-10",
+      "demo-menu-item-card",
+      "flow-button",
+      "ghost-404-page",
+      "hero-10",
+      "hero-10-utils",
+      "menu-item-card",
+      "text-reveal-faqs"
+    ],
+    "preferredPrimitives": [
+      "radix-ui"
+    ],
+    "patterns": []
+  },
+  "constraints": {
+    "must": [],
+    "avoid": []
+  },
+  "decisions": [
+    {
+      "topic": "menu-ordering-layout",
+      "chosenDirection": "Direction 1: Split Culinary Studio",
+      "rationale": "High-density 3-column split studio layout with sticky vertical category rail, inline [- 1 +] quantity steppers on MenuItemCard, and desktop live order receipt with instant checkout and WhatsApp ordering. Collapses seamlessly to sticky horizontal rail and bottom bar on mobile.",
+      "timestamp": "2026-10-10T03:44:00Z"
+    }
+  ],
+  "evidence": [
+    {
+      "fact": "components.installed",
+      "source": "components/ui"
+    },
+    {
+      "fact": "components.installed",
+      "source": "src/components/ui"
+    },
+    {
+      "fact": "design.colorMode:light-and-dark",
+      "source": "src/index.css"
+    },
+    {
+      "fact": "design.tokens",
+      "source": "src/index.css"
+    },
+    {
+      "fact": "project.stack:react",
+      "source": "package.json"
+    },
+    {
+      "fact": "project.stack:tailwind-v3",
+      "source": "package.json"
+    },
+    {
+      "fact": "project.stack:vite",
+      "source": "package.json"
+    }
+  ],
+  "generatedAt": "2026-10-10T03:34:14.879Z"
+}
