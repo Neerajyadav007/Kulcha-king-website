@@ -14,12 +14,17 @@ export default function CartDrawer() {
     clearCart,
     itemCount,
     subtotal,
+    discountAmount,
+    coupon,
+    applyCoupon,
+    removeCoupon,
     gst,
     deliveryFee,
     grandTotal,
   } = useCart();
 
   const [checkoutModalOpen, setCheckoutModalOpen] = useState(false);
+  const [promoInput, setPromoInput] = useState('');
 
   if (!isCartOpen) return null;
 
@@ -155,11 +160,59 @@ export default function CartDrawer() {
             {/* Footer Summary & Single Action Button */}
             {items.length > 0 && (
               <div className="p-6 border-t border-neutral-200 dark:border-neutral-800 bg-neutral-100/70 dark:bg-[#0c0e17] space-y-4">
+                {/* Promo Code Input */}
+                <div className="p-3 rounded-2xl bg-white dark:bg-neutral-800/80 border border-neutral-200 dark:border-neutral-700">
+                  <div className="flex items-center justify-between text-[11px] font-bold text-neutral-500 mb-1.5">
+                    <span>Have a Promo Code?</span>
+                    {coupon && (
+                      <button
+                        onClick={removeCoupon}
+                        className="text-red-500 text-[10px] font-bold hover:underline"
+                      >
+                        Remove
+                      </button>
+                    )}
+                  </div>
+                  {coupon ? (
+                    <div className="flex items-center justify-between text-xs font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/40 p-2 rounded-xl border border-emerald-200 dark:border-emerald-800">
+                      <span>✓ {coupon.code} Applied ({coupon.percent ? `${coupon.percent}% OFF` : 'Free Delivery'})</span>
+                      <span className="text-[#FF6B00]">-₹{discountAmount}</span>
+                    </div>
+                  ) : (
+                    <div className="flex gap-2">
+                      <input
+                        type="text"
+                        value={promoInput}
+                        onChange={(e) => setPromoInput(e.target.value)}
+                        placeholder="Try FIRSTKULCHA"
+                        className="flex-1 px-3 py-1.5 rounded-xl text-xs bg-neutral-100 dark:bg-neutral-900 border border-transparent focus:border-[#FF6B00] focus:outline-none uppercase font-bold"
+                      />
+                      <button
+                        onClick={() => {
+                          if (promoInput.trim()) {
+                            applyCoupon(promoInput);
+                            setPromoInput('');
+                          }
+                        }}
+                        className="px-3.5 py-1.5 rounded-xl bg-[#FF6B00] hover:bg-[#E05E00] text-white font-bold text-xs transition-colors"
+                      >
+                        Apply
+                      </button>
+                    </div>
+                  )}
+                </div>
+
                 <div className="space-y-1.5 text-xs text-neutral-700 dark:text-neutral-300">
                   <div className="flex justify-between">
                     <span>Subtotal</span>
                     <span className="font-bold text-neutral-900 dark:text-white">₹{subtotal}</span>
                   </div>
+                  {discountAmount > 0 && (
+                    <div className="flex justify-between text-emerald-600 dark:text-emerald-400 font-bold">
+                      <span>Discount ({coupon?.code})</span>
+                      <span>-₹{discountAmount}</span>
+                    </div>
+                  )}
                   <div className="flex justify-between">
                     <span>GST (5%)</span>
                     <span className="font-bold text-neutral-900 dark:text-white">₹{gst}</span>
@@ -172,16 +225,16 @@ export default function CartDrawer() {
                   </div>
                   <div className="pt-2 border-t border-neutral-200 dark:border-neutral-800 flex justify-between text-base font-bold text-neutral-900 dark:text-white">
                     <span>Total Amount</span>
-                    <span className="text-xl font-serif text-amber-600 dark:text-amber-400 font-black">₹{grandTotal}</span>
+                    <span className="text-xl font-extrabold text-[#FF6B00]">₹{grandTotal}</span>
                   </div>
                 </div>
 
                 {/* Exactly 1 primary action button */}
                 <button
                   onClick={() => setCheckoutModalOpen(true)}
-                  className="btn-luxury w-full !py-3.5"
+                  className="w-full py-3.5 px-4 rounded-2xl bg-[#FF6B00] hover:bg-[#E05E00] active:scale-98 text-white font-extrabold text-sm flex items-center justify-center gap-2 shadow-lg shadow-orange-500/25 transition-all"
                 >
-                  <span>Order Now (₹{grandTotal})</span>
+                  <span>Proceed to Checkout (₹{grandTotal})</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
               </div>

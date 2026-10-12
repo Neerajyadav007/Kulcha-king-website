@@ -104,7 +104,7 @@ export default function FAQs({
     {
       id: 'item-5',
       question: 'Can I place bulk party orders or catering requests?',
-      answer: 'Yes, we gladly cater family events, birthday parties, and office lunches. You can submit an inquiry through our Contact page or call our kitchen hotline at +91 89490 19457.',
+      answer: 'Yes, we gladly cater family events, birthday parties, and office lunches. You can submit an inquiry through our Contact page or call our kitchen hotline at +91 93587 90020.',
     },
   ];
 
@@ -140,10 +140,10 @@ export default function FAQs({
                 </Link>{' '}
                 or call{' '}
                 <a
-                  href="tel:+918949019457"
+                  href="tel:+919358790020"
                   className="text-amber-600 dark:text-amber-400 font-bold hover:underline"
                 >
-                  +91 89490 19457
+                  +91 93587 90020
                 </a>.
               </p>
             </div>

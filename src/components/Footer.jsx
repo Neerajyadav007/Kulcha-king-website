@@ -11,12 +11,20 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
           {/* Real Logo info */}
           <div className="md:col-span-1 space-y-3">
-            <a href="index.html" className="inline-block group" aria-label="Kulcha King Home">
+            <a href="index.html" className="flex items-center gap-2.5 group" aria-label="Kulcha King Home">
               <img
                 src="/logo.png"
                 alt="Kulcha King & Parantha Singh"
-                className="h-12 w-auto object-contain drop-shadow-[0_2px_8px_rgba(245,158,11,0.25)]"
+                className="h-12 w-auto object-contain drop-shadow-[0_2px_8px_rgba(245,158,11,0.25)] group-hover:scale-105 transition-transform"
               />
+              <div className="flex flex-col text-left">
+                <span className="font-black text-base text-white tracking-tight leading-tight group-hover:text-amber-400 transition-colors">
+                  Kulcha King
+                </span>
+                <span className="text-[10px] text-amber-400 font-semibold tracking-wide">
+                  &amp; Parantha Singh
+                </span>
+              </div>
             </a>
             <p className="text-xs text-neutral-400 leading-relaxed">
               Authentic Amritsari clay-tandoor recipes baked fresh in Mansarovar, Jaipur since 2010.
@@ -35,7 +43,6 @@ export default function Footer() {
               <li><a href="menu.html" className="hover:text-amber-400 transition-colors">Menu &amp; Ordering</a></li>
               <li><a href="about.html" className="hover:text-amber-400 transition-colors">Our Heritage</a></li>
               <li><a href="contact.html" className="hover:text-amber-400 transition-colors">Location &amp; Contact</a></li>
-              <li><a href="404.html" className="hover:text-amber-400 transition-colors">404 Ghost Page</a></li>
             </ul>
           </div>
 
@@ -88,10 +95,12 @@ export default function Footer() {
         {/* Bottom copyright */}
         <div className="pt-6 border-t border-neutral-800 text-xs text-neutral-400 flex flex-col sm:flex-row justify-between items-center gap-3">
           <p>© {currentYear} Kulcha King &amp; Parantha Singh. All rights reserved.</p>
-          <div className="flex gap-4">
-            <a href="menu.html" className="hover:text-amber-400 transition-colors">Menu</a>
-            <a href="contact.html" className="hover:text-amber-400 transition-colors">Reservations</a>
-            <a href="404.html" className="hover:text-amber-400 transition-colors">Custom 404</a>
+          <div className="flex flex-wrap items-center gap-4 text-[11px]">
+            <a href="terms.html" className="hover:text-amber-400 transition-colors">Terms</a>
+            <a href="privacy.html" className="hover:text-amber-400 transition-colors">Privacy</a>
+            <a href="refund.html" className="hover:text-amber-400 transition-colors">Refunds</a>
+            <span className="text-neutral-700">•</span>
+            <a href="admin.html" className="text-neutral-500 hover:text-neutral-300 transition-colors" title="Kitchen &amp; Owner Admin Access">Staff Portal</a>
           </div>
         </div>
       </div>

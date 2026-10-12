@@ -12,7 +12,7 @@ export const RESTAURANT_INFO = {
     googleMapsUrl: "https://maps.google.com/?q=Kulcha+King+Parantha+Singh+Jaipur",
   },
   phones: [
-    { label: "Primary Order Line", number: "+91 89490 19457", tel: "+918949019457" },
+    { label: "Primary Order Line", number: "+91 93587 90020", tel: "+919358790020" },
     { label: "Secondary Line", number: "+91 88266 80401", tel: "+918826680401" },
   ],
   email: "kulchakingsoranthasingh@gmail.com",

@@ -37,7 +37,7 @@ export default function Navbar({ activePage = 'home' }) {
             {/* Brand Logo with golden warmth */}
             <a
               href="index.html"
-              className="flex items-center gap-3 group focus:outline-none"
+              className="flex items-center gap-2.5 sm:gap-3 group focus:outline-none"
               aria-label="Kulcha King & Parantha Singh Home"
             >
               <div className="relative">
@@ -46,6 +46,14 @@ export default function Navbar({ activePage = 'home' }) {
                   alt="Kulcha King & Parantha Singh"
                   className="h-9 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105 drop-shadow-[0_2px_10px_rgba(245,158,11,0.25)]"
                 />
+              </div>
+              <div className="flex flex-col text-left">
+                <span className="font-extrabold text-sm sm:text-base tracking-tight text-neutral-900 dark:text-white leading-tight group-hover:text-amber-500 transition-colors">
+                  Kulcha King
+                </span>
+                <span className="text-[10px] text-neutral-500 dark:text-neutral-400 font-semibold tracking-wide leading-none">
+                  &amp; Parantha Singh
+                </span>
               </div>
             </a>
 

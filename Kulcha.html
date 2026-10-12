@@ -1500,7 +1500,7 @@
             
             <div class="header-buttons">
                 <a href="#order" class="btn btn-primary">Order Online</a>
-                <a href="tel:+918949019457" class="btn btn-secondary">Call Now</a>
+                <a href="tel:+919358790020" class="btn btn-secondary">Call Now</a>
             </div>
         </div>
     </header>
@@ -2160,8 +2160,8 @@
                         <div class="confirmation-actions">
                             <p>We'll send you a confirmation SMS shortly.</p>
                             <button class="btn btn-primary" id="newOrderBtn">Start New Order</button>
-                            <a href="tel:+918949019457" class="btn btn-secondary">
-                                <i class="fas fa-phone"></i> Call Us: +91 89490 19457
+                            <a href="tel:+919358790020" class="btn btn-secondary">
+                                <i class="fas fa-phone"></i> Call Us: +91 93587 90020
                             </a>
                         </div>
                     </div>
@@ -2280,7 +2280,7 @@
                     </div>
                     <h3>Call Us</h3>
                     <div class="contact-details">
-                        <p><strong>Primary:</strong> <a href="tel:+918949019457" class="contact-link">+91 89490 19457</a></p>
+                        <p><strong>Primary:</strong> <a href="tel:+919358790020" class="contact-link">+91 93587 90020</a></p>
                         <p><strong>Secondary:</strong> <a href="tel:+918826680401" class="contact-link">+91 88266 80401</a></p>
                         <p><strong>Email:</strong> <a href="mailto:kulchakingsoranthasingh@gmail.com" class="contact-link">kulchakingsoranthasingh@gmail.com</a></p>
                     </div>
@@ -2921,11 +2921,11 @@
                 const phone = this.orderData.phone;
                 const orderDetails = this.formatOrderForNotification();
                 
-                alert(`Order placed successfully!\n\nOrder #: ${this.orderNumber}\n\nWe have received your order and will contact you shortly at ${phone}.\n\nYou can also call us at +91 89490 19457 for any queries.`);
+                alert(`Order placed successfully!\n\nOrder #: ${this.orderNumber}\n\nWe have received your order and will contact you shortly at ${phone}.\n\nYou can also call us at +91 93587 90020 for any queries.`);
                 
                 const whatsappMessage = `New Order Received!\n\nOrder #: ${this.orderNumber}\nCustomer: ${this.orderData.name}\nPhone: ${this.orderData.phone}\nOrder Type: ${this.orderData.orderType}\nTotal: ₹${this.orderData.total}\n\nItems:\n${orderDetails}`;
                 
-                const whatsappUrl = `https://wa.me/918949019457?text=${encodeURIComponent(whatsappMessage)}`;
+                const whatsappUrl = `https://wa.me/919358790020?text=${encodeURIComponent(whatsappMessage)}`;
                 
                 setTimeout(() => {
                     window.open(whatsappUrl, '_blank');
@@ -2995,7 +2995,7 @@
                         <li>For any cancellations, please call us at least 1 hour before delivery time.</li>
                         <li>We reserve the right to modify menu items based on availability.</li>
                         <li>Prices are inclusive of all taxes.</li>
-                        <li>For any complaints or feedback, please call us at +91 89490 19457.</li>
+                        <li>For any complaints or feedback, please call us at +91 93587 90020.</li>
                     </ol>
                     <p>By placing an order, you agree to these terms and conditions.</p>
                 `;

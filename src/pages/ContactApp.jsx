@@ -130,7 +130,7 @@ ${formData.specialRequests ? `*Special Request:* ${formData.specialRequests}` : 
 Please confirm our reservation at Kulcha King & Parantha Singh Mansarovar, Jaipur!`;
 
     const encoded = encodeURIComponent(message);
-    window.open(`https://wa.me/918949019457?text=${encoded}`, '_blank');
+    window.open(`https://wa.me/919358790020?text=${encoded}`, '_blank');
   };
 
   return (
@@ -220,7 +220,7 @@ Please confirm our reservation at Kulcha King & Parantha Singh Mansarovar, Jaipu
                         Book Another Table
                       </button>
                       <a
-                        href="tel:+918949019457"
+                        href="tel:+919358790020"
                         className="btn-luxury !py-2.5 !px-5 !text-xs flex items-center gap-2"
                       >
                         <PhoneCall className="w-3.5 h-3.5" />
@@ -480,8 +480,8 @@ Please confirm our reservation at Kulcha King & Parantha Singh Mansarovar, Jaipu
 
                     <p className="text-[11px] text-center text-neutral-500 dark:text-neutral-400">
                       Need a large catering or custom hall reservation? Call kitchen directly at{' '}
-                      <a href="tel:+918949019457" className="text-amber-600 dark:text-amber-400 font-bold underline">
-                        +91 89490 19457
+                      <a href="tel:+919358790020" className="text-amber-600 dark:text-amber-400 font-bold underline">
+                        +91 93587 90020
                       </a>
                     </p>
                   </form>
@@ -562,12 +562,12 @@ Please confirm our reservation at Kulcha King & Parantha Singh Mansarovar, Jaipu
 
                 <div className="space-y-2 pt-1 text-xs">
                   <a
-                    href="tel:+918949019457"
+                    href="tel:+919358790020"
                     className="flex items-center justify-between p-3 rounded-xl bg-neutral-50 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-700/80 hover:border-amber-500 transition-colors"
                   >
                     <div>
                       <span className="text-neutral-500 dark:text-neutral-400 text-[10px] block">Primary Line:</span>
-                      <strong className="text-sm font-bold text-neutral-900 dark:text-white">+91 89490 19457</strong>
+                      <strong className="text-sm font-bold text-neutral-900 dark:text-white">+91 93587 90020</strong>
                     </div>
                     <span className="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 font-bold">
                       Tap to Call

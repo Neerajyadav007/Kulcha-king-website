@@ -121,6 +121,63 @@ export function CartProvider({ children }) {
     showToast(`Added ${product.name} to your order!`);
   };
 
+  // Favorites state
+  const FAVORITES_KEY = 'kulcha_king_favorites_v1';
+  const [favorites, setFavorites] = useState(() => {
+    try {
+      const saved = localStorage.getItem(FAVORITES_KEY);
+      return saved ? JSON.parse(saved) : ['k-01', 'k-03', 'k-05'];
+    } catch (e) {
+      return ['k-01', 'k-03', 'k-05'];
+    }
+  });
+
+  useEffect(() => {
+    try {
+      localStorage.setItem(FAVORITES_KEY, JSON.stringify(favorites));
+    } catch (e) {}
+  }, [favorites]);
+
+  const toggleFavorite = (id) => {
+    setFavorites((prev) => {
+      const isFav = prev.includes(id);
+      if (isFav) {
+        showToast('Removed from favorites', 'info');
+        return prev.filter((item) => item !== id);
+      } else {
+        showToast('Saved to your favorites! ❤️', 'success');
+        return [...prev, id];
+      }
+    });
+  };
+
+  const isFavorite = (id) => favorites.includes(id);
+
+  // Coupon state
+  const [coupon, setCoupon] = useState(null);
+
+  const applyCoupon = (code) => {
+    const cleanCode = (code || '').trim().toUpperCase();
+    if (cleanCode === 'FIRSTKULCHA' || cleanCode === 'KULCHAKING') {
+      const percent = cleanCode === 'FIRSTKULCHA' ? 30 : 20;
+      setCoupon({ code: cleanCode, percent });
+      showToast(`Promo ${cleanCode} applied: ${percent}% OFF! 🎉`, 'success');
+      return { success: true, message: `${percent}% discount applied!` };
+    } else if (cleanCode === 'FREESHIP') {
+      setCoupon({ code: cleanCode, freeDelivery: true });
+      showToast('Free delivery coupon applied! 🛵', 'success');
+      return { success: true, message: 'Free delivery applied!' };
+    } else {
+      showToast('Invalid coupon code. Try FIRSTKULCHA', 'error');
+      return { success: false, message: 'Invalid coupon code' };
+    }
+  };
+
+  const removeCoupon = () => {
+    setCoupon(null);
+    showToast('Coupon removed', 'info');
+  };
+
   const updateQuantity = (itemKey, qty) => {
     if (qty <= 0) {
       removeFromCart(itemKey);
@@ -138,6 +195,7 @@ export function CartProvider({ children }) {
 
   const clearCart = () => {
     setItems([]);
+    setCoupon(null);
     try {
       localStorage.removeItem(STORAGE_KEY);
     } catch (e) {}
@@ -145,9 +203,18 @@ export function CartProvider({ children }) {
 
   const itemCount = items.reduce((sum, item) => sum + item.quantity, 0);
   const subtotal = items.reduce((sum, item) => sum + item.unitPrice * item.quantity, 0);
-  const gst = Math.round(subtotal * 0.05); // 5% GST
-  const deliveryFee = subtotal === 0 || subtotal >= 499 ? 0 : 40;
-  const grandTotal = subtotal + gst + deliveryFee;
+
+  // Calculate discount
+  let discountAmount = 0;
+  if (coupon && coupon.percent && subtotal > 0) {
+    discountAmount = Math.round((subtotal * coupon.percent) / 100);
+  }
+  const discountedSubtotal = Math.max(0, subtotal - discountAmount);
+
+  const gst = Math.round(discountedSubtotal * 0.05); // 5% GST
+  const deliveryFee =
+    subtotal === 0 || subtotal >= 499 || (coupon && coupon.freeDelivery) ? 0 : 40;
+  const grandTotal = discountedSubtotal + gst + deliveryFee;
 
   return (
     <CartContext.Provider
@@ -165,9 +232,17 @@ export function CartProvider({ children }) {
         clearCart,
         itemCount,
         subtotal,
+        discountAmount,
+        discountedSubtotal,
+        coupon,
+        applyCoupon,
+        removeCoupon,
         gst,
         deliveryFee,
         grandTotal,
+        favorites,
+        toggleFavorite,
+        isFavorite,
         toast,
         showToast,
       }}
